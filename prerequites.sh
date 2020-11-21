@@ -44,4 +44,4 @@ sudo -s
 . <( wget -O - https://code.headmelted.com/installers/apt.sh ); 
 
 
-echo "All packages have been installed!"
+echo "All packages have been installed: /nUpdate&Upgrade /nLocate /nNet-Tools /nLinux Tweaks /nPython Package Manager /nPyMySQL /nPretty Errors /n VsCode"
