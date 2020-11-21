@@ -44,4 +44,4 @@ sudo -s
 . <( wget -O - https://code.headmelted.com/installers/apt.sh ); 
 
 
-echo "script execution complete"
+echo "All packages have been installed!"
