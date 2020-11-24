@@ -1,7 +1,8 @@
 # Raspberry Pi Handbook
 ***
 
-This repository is mainly intented to minimalisticaly track the steps for installing Ubuntu on a Raspberry Pi 4 with overclocking the CPU and software fine tuning, until it becomes the desired coding machine we aspire for.
+Hardware: Raspberry Pi 4B (with CPU overclock).
+Intention: minimalisticaly track the steps for installing Ubuntu Desktop, necessary software/packages/applications and fine tuning until it becomes a coding machine or even Web Server.
 
                                       
-I strongly advise to also check the Wiki pages. .||.
+Check the Wiki pages! o|..|o
