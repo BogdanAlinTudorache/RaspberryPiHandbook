@@ -11,6 +11,11 @@ sudo apt install mlocate;
 
 echo "LOCATE install COMPLETE!"
 
+# Install htop
+sudo snap install htop;
+
+echo "HTOP install COMPLETE!"
+
 # Install net-tools package. This includes arp, ifconfig, netstat, rarp, nameif and route.
 sudo apt install net-tools;
 
