@@ -40,7 +40,7 @@ python3 -m pip install PyMySQL;
 echo "PYTHON MYSQL instalation COMPLETE!"
 
 # Install pretty errors
-python -m pip install pretty_errors;
+python3 -m pip install pretty_errors;
 
 echo "PYTHON PRETTY ERRORS instalation COMPLETE!"
 
