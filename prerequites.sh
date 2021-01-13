@@ -16,10 +16,15 @@ sudo apt-get install synapse;
 
 echo "Synapse install COMPLETE!"
 
+# Install vim
+sudo apt install openssh-server;
+
+echo "VIM install COMPLETE!" 
+
 # Install openssh
 sudo apt install openssh-server;
 
-echo "OpenSSH install COMPLETE!"
+echo "OpenSSH install COMPLETE!" 
 
 # Install htop
 sudo snap install htop;
@@ -60,4 +65,4 @@ sudo -s
 . <( wget -O - https://code.headmelted.com/installers/apt.sh ); 
 
 
-echo "All packages have been installed: /nUpdate&Upgrade /nLocate /nSynapse /nhtop /nNet-Tools /nLinux Tweaks /nPython Package Manager /nPyMySQL /nPretty Errors /n VsCode"
+echo "All packages have been installed: /nUpdate&Upgrade /nLocate /nSynapse /nvim n/OpenSSH /nhtop /nNet-Tools /nLinux Tweaks /nPython Package Manager /nPyMySQL /nPretty Errors /n VsCode"
