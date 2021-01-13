@@ -16,6 +16,11 @@ sudo apt-get install synapse;
 
 echo "Synapse install COMPLETE!"
 
+# Install openssh
+sudo apt install openssh-server;
+
+echo "OpenSSH install COMPLETE!"
+
 # Install htop
 sudo snap install htop;
 
