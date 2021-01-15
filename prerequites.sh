@@ -42,6 +42,8 @@ echo export HISTTIMEFORMAT=\"%m/%d/%y %T \" >> ~/.bash_profile;
 echo export PS1='$(whoami): ${PWD/*\//}/ :' >> ~/.bash_profile;
 echo alias ip='ifconfig | grep '\''inet'\'' | grep -Fv 127.0.0.1 |  awk '\''FNR==5 {print $2 }'\'''  >> /.bash_profile;
 
+source ~./bash_profile;
+
 echo "LINUX tweaks INSTALLED!"
 
 # Install python3 package manager
