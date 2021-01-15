@@ -37,9 +37,10 @@ sudo apt install net-tools;
 echo "NET-TOOLS install COMPLETE!"
 
 ### Linux terminal tweaks
+touch ~/.bash_profile;
 echo export HISTTIMEFORMAT=\"%m/%d/%y %T \" >> ~/.bash_profile;
 echo export PS1='$(whoami): ${PWD/*\//}/ :' >> ~/.bash_profile;
-echo alias ip='ifconfig | grep '\''inet'\'' | grep -Fv 127.0.0.1 |  awk '\''FNR==5 {print $2 }'\'''  >> /.bashrc;
+echo alias ip='ifconfig | grep '\''inet'\'' | grep -Fv 127.0.0.1 |  awk '\''FNR==5 {print $2 }'\'''  >> /.bash_profile;
 
 echo "LINUX tweaks INSTALLED!"
 
