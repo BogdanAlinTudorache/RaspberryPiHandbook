@@ -6,3 +6,4 @@ alias pip3=pip;
 sudo pip3 install pandas; # both pandas and numpy
 sudo pip3 install selenium;
 sudo pip3 install beautifulsoup4;
+sudo python3 -m pip install matplotlib;
