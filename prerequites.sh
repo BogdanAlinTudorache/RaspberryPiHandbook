@@ -39,7 +39,10 @@ echo "NET-TOOLS install COMPLETE!"
 ### Linux terminal tweaks
 touch ~/.bash_profile;
 echo export HISTTIMEFORMAT=\"%m/%d/%y %T \" >> ~/.bash_profile;
+#no color PS1
 echo export PS1='$(whoami):${PWD/*\//}/ :' >> ~/.bash_profile;
+#with color PS1
+echo export PS1='\[\e[0;36m\]$(whoami):\[\e[32m\]${PWD/*\//}/ :\[\e[0m\]'  >> ~/.bash_profile;
 echo alias ip='ifconfig | grep '\''inet'\'' | grep -Fv 127.0.0.1 |  awk '\''FNR==1 {print $2 }'\'''  >> /.bash_profile;
 
 source ~./bash_profile;
