@@ -14,7 +14,7 @@
 #
 # Provide customizations in a jail.local file or a jail.d/customisation.local.
 # For example to change the default bantime for all jails and to enable the
-# ssh-tables jail the following (uncommented) would appear in the .local file.
+# ssh-iptables jail the following (uncommented) would appear in the .local file.
 # See man 5 jail.conf for details.
 #
 # [DEFAULT]
@@ -89,7 +89,7 @@ before = paths-debian.conf
 # "ignoreip" can be a list of IP addresses, CIDR masks or DNS hosts. Fail2ban
 # will not ban a host which matches an address in this list. Several addresses
 # can be defined using space (and/or comma) separator.
-ignoreip = XXXX.XXXX.XXXX.XXXX
+ignoreip = 143.177.1.221
 
 # External command that will take an tagged arguments to ignore, e.g. <ip>,
 # and return true if the IP is to be ignored. False otherwise.
@@ -325,8 +325,31 @@ enabled  = true
 filter   = apache-badbots
 port     = http,https
 logpath  = /var/log/apache2/access.log
-bantime  = 48h
-maxretry = 0
+bantime  = -1
+maxretry = 2
+
+
+[block-all-bad-requests]
+#added by me
+enabled  = true
+filter   = block-all-bad-requests
+port     = http,https
+logpath  = %(apache_access_log)s
+           %(apache_error_log)s
+maxretry = 3
+findtime = 1
+bantime = 86400
+
+[block-all-dem-noobs]
+#added by me
+enabled = false
+port = http,https
+filter = block-all-dem-noobs
+logpath = /var/log/apache2/access.log
+maxretry = 10
+findtime = 1
+bantime = 86400
+action = iptables[name=HTTP, port=http, protocol=tcp]
 
 
 [apache-noscript]
@@ -364,7 +387,7 @@ bantime  = -1
 
 
 [apache-fakegooglebot]
-enabled  = 1
+enabled  = true
 port     = http,https
 logpath  = /var/log/apache2/access.log
 maxretry = 1
@@ -853,7 +876,7 @@ logpath  = /var/log/mongodb/mongodb.log
 # 2. Increase dbpurgeage defined in fail2ban.conf to e.g. 648000 (7.5 days)
 #    to maintain entries for failed logins for sufficient amount of time
 [recidive]
-enabled = false
+enabled = true
 logpath  = /var/log/fail2ban.log
 banaction = %(banaction_allports)s
 bantime  = 1w
@@ -1006,4 +1029,3 @@ logpath = %(apache_error_log)s
 enabled = false
 port    = http,https
 logpath = /var/log/traefik/access.log
-
